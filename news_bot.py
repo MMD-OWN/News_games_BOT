@@ -17,11 +17,10 @@ bot = Client(my_secret)
 async def news_game():
     news = 0
     feed = feedparser.parse("https://www.ign.com/rss/articles/feed?tags=games")
-    await bot.send_message('325093153', "19")
     num_entries = 10
-    print(len(feed.entries[:num_entries]))
     for idx, entry in enumerate(reversed(feed.entries[:num_entries]), start=1):
         if data_json.add_new_id("news.json", entry.id) == "True":
+            await bot.send_message('325093153', "19")
             news = news + 1
             texts = '*' + tg.translate('fa', entry.title).replace("بخار", "Steam") + ' *' + '\n\n' + tg.translate('fa', entry.summary).replace("بخار", "Steam") + '\n' + "[لینک کامل خبر در سایت ign.com](" + str(entry.links[0]['href']) + ")"
             texts = texts + '\n' + '#news_game #news #game' + '\n' + "@mmd_own"
