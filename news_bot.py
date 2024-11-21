@@ -12,7 +12,7 @@ import os
 
 my_secret = os.getenv('TEST_BOT')
 
-bot = Client("my_secret")
+bot = Client("551782720:6CAPNpLG32GDxRj1qdP7dtRDh1eZVHQlGgQatBD1")
 
 async def news_game():
     news = 0
@@ -51,6 +51,7 @@ async def review_game():
 @bot.on_initialize()
 async def task(client):
     await client.send_message('325093153', 'بات اجرا شد')
+    await client.send_message('325093153', my_secret)
     while True:
         await client.send_message('325093153', "چک کردن اخبار")
         await news_game()
