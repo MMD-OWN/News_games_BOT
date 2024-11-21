@@ -33,9 +33,8 @@ jobs:
           pip install pytz
           pip install python-time
           pip install DateTime
-      - name: Run script
+      - name: Run the program
         env: 
           MY_SECRET: ${{ secrets.TEST_BOT }}
-      - name: Run the program
         run: |
           python news_bot.py
