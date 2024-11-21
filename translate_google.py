@@ -2,7 +2,7 @@ import requests
 import time
 import os
 
-my_secret = os.getenv('GOOGRL_TR')
+my_secret = os.getenv('GOOGEL_TR')
 
 def translate(lan, text):
     time.sleep(0.1)
@@ -14,7 +14,7 @@ def translate(lan, text):
     }
     headers = {
         'accept': 'application/json',
-        'one-api-token': my_secret,
+        'one-api-token': str(my_secret),
         'Content-Type': 'application/json'
     }
     response = requests.post('https://api.one-api.ir/translate/v1/yandex/', json=data, headers=headers)
