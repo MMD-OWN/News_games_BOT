@@ -38,3 +38,4 @@ jobs:
           python news_bot.py
         env: 
           TEST_BOT: ${{ secrets.TEST_BOT }}
+          GOOGEL_TR: ${{ secrets.GOOGEL_TR }}
