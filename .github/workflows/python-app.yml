@@ -34,7 +34,7 @@ jobs:
           pip install python-time
           pip install DateTime
       - name: Run the program
-        env: 
-          MY_SECRET: ${{ secrets.TEST_BOT }}
         run: |
           python news_bot.py
+        env: 
+          MY_SECRET: ${{ secrets.TEST_BOT }}
