@@ -8,8 +8,11 @@ from balethon import errors
 import asyncio
 import download_img as dimg
 import data_json
+import os
 
-bot = Client("551782720:6CAPNpLG32GDxRj1qdP7dtRDh1eZVHQlGgQatBD1")
+my_secret = os.getenv('TEST_BOT')
+
+bot = Client("my_secret")
 
 async def news_game():
     news = 0
