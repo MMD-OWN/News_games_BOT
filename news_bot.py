@@ -16,8 +16,8 @@ bot = Client(my_secret)
 
 async def news_game():
     news = 0
-    await client.send_message('325093153', "19")
     feed = feedparser.parse("https://www.ign.com/rss/articles/feed?tags=games")
+    await bot.send_message('325093153', "19")
     num_entries = 10
     print(len(feed.entries[:num_entries]))
     for idx, entry in enumerate(reversed(feed.entries[:num_entries]), start=1):
