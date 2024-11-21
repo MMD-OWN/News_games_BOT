@@ -20,10 +20,10 @@ async def news_game():
     num_entries = 10
     for idx, entry in enumerate(reversed(feed.entries[:num_entries]), start=1):
         if data_json.add_new_id("news.json", entry.id) == "True":
-            await bot.send_message('325093153', "19")
             news = news + 1
             texts = '*' + tg.translate('fa', entry.title).replace("بخار", "Steam") + ' *' + '\n\n' + tg.translate('fa', entry.summary).replace("بخار", "Steam") + '\n' + "[لینک کامل خبر در سایت ign.com](" + str(entry.links[0]['href']) + ")"
             texts = texts + '\n' + '#news_game #news #game' + '\n' + "@mmd_own"
+            await bot.send_message('325093153', "19")
             if entry.media_content[0]['url']:
                 dimg.download_image(entry.media_content[0]['url'], '1.png')
                 await bot.send_photo('4470309968', '1.png', texts)
