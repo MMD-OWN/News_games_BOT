@@ -12,7 +12,7 @@ import os
 
 my_secret = os.getenv('TEST_BOT')
 
-bot = Client("TEST_BOT")
+bot = Client(my_secret)
 
 async def news_game():
     news = 0
