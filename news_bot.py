@@ -16,10 +16,10 @@ bot = Client(my_secret)
 
 async def news_game():
     news = 0
+    await client.send_message('325093153', "19")
     feed = feedparser.parse("https://www.ign.com/rss/articles/feed?tags=games")
     num_entries = 10
     print(len(feed.entries[:num_entries]))
-    await client.send_message('325093153', "22")
     for idx, entry in enumerate(reversed(feed.entries[:num_entries]), start=1):
         if data_json.add_new_id("news.json", entry.id) == "True":
             news = news + 1
