@@ -23,5 +23,3 @@ def add_new_id(name_jason, new_id):
         database.append({"id": new_id})
         write_database(name_jason, database)
         return "True"
-
-
