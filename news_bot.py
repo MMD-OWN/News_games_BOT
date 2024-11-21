@@ -52,7 +52,7 @@ async def task(client):
         await client.send_message('325093153', "چک کردن اخبار")
         await news_game()
         await client.send_message('325093153', "چک کردن برسی های گیم")
-        review_game()
+        await review_game()
         await asyncio.sleep(900)
 
 @bot.on_message(private)
