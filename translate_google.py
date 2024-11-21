@@ -2,7 +2,7 @@ import requests
 import time
 import os
 
-my_secret = os.getenv('googel_tr')
+my_secret = os.getenv('GOOGRL_TR')
 
 def translate(lan, text):
     time.sleep(0.1)
