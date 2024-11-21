@@ -1,5 +1,9 @@
 import requests
 import time
+import os
+
+my_secret = os.getenv('TEST_BOT')
+
 def translate(lan, text):
     time.sleep(0.1)
     if text == '' or text == ' ':
@@ -10,7 +14,7 @@ def translate(lan, text):
     }
     headers = {
         'accept': 'application/json',
-        'one-api-token': '234274:66826ab75035b',
+        'one-api-token': my_secret,
         'Content-Type': 'application/json'
     }
     response = requests.post('https://api.one-api.ir/translate/v1/yandex/', json=data, headers=headers)
