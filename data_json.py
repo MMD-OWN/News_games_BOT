@@ -19,7 +19,7 @@ def add_new_id(name_jason, new_id):
         return "False"
     else:
         # حذف قدیمی‌ترین آی‌دی و افزودن آی‌دی جدید
-        database.pop(0)
-        #database.append({"id": new_id})
+        #database.pop(0)
+        database.append({"id": new_id})
         write_database(name_jason, database)
         return "True"
